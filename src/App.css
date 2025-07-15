@@ -12,6 +12,7 @@
   --ztblack:#4d4d4d;
   --ztwgray:#f2f2f2;
   --ztwhite:#ffffff;
+  --zibani-grad: linear-gradient(180deg, #ff5a35 0%, #ed0bd3 100%);
 }
 
 .btn-primary{
@@ -58,8 +59,15 @@
 .text-primary {
   color: var(--ztpink);
 }
+.bg-primary {
+  background-color: var(--ztpink);
+}
 .bg-primary-50 {
   background-color: rgba(255, 90, 53, 0.1);
+}
+
+.border-primary {
+  border-color: var(--ztpink);
 }
 
 @keyframes floatVertical {
@@ -71,17 +79,59 @@
   }
 }
 
-@keyframes driftHorizontal {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: 100%;
-  }
-}
 
 .float-bg {
   animation:
-    floatVertical 5s ease-in-out infinite,
-    driftHorizontal 3s linear infinite;
+    floatVertical 6s ease-in-out infinite;
+}
+
+
+.bg-15 {
+  position: relative;
+  /* Ensure content stays opaque */
+}
+
+.bg-15::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: inherit; /* Inherits the parent's bg color */
+  opacity: 0.15; /* 15% opacity */
+  z-index: -1; /* Places it behind the content */
+  pointer-events: none; /* Allows interaction with elements beneath */
+}
+
+/* For elements that need to establish a new stacking context */
+.bg-15 {
+  isolation: isolate; /* Optional: prevents pseudo-element from showing behind */
+}
+
+.zibani-border-grad{
+   border: 2px solid var(--zibani-grad, #FF5A35);
+}
+
+.gradient-border-card {
+  background: linear-gradient(180deg, #ff5a35 0%, #ed0bd3 100%);
+  padding: 3px; /* border thickness */
+  border-radius: 1rem;
+}
+
+.card-content {
+  background: var(--ztblack); /* or dark for dark mode */
+  border-radius: 0.875rem; /* slightly less than outer */
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.card-hover-float {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-float:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }

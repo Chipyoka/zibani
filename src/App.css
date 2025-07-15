@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 1920px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  --ztpink:#ff5a35;
+  --ztpink-hover:#fa4922;
+  --ztblue:#368aff;
+  --ztblack:#4d4d4d;
+  --ztwgray:#f2f2f2;
+  --ztwhite:#ffffff;
+}
+
+.btn-primary{
+  background-color: var(--ztpink) !important;
+  color: white !important;
+  padding: 0.75rem 1.75rem;
+    border: 3px solid var(--ztpink) !important;
+
+  /* border-radius: 1.55rem; */
+
+  cursor: pointer;
+}
+.btn-primary-outlined{
+  background-color: transparent !important;
+  color: var(--ztpink) !important;
+  padding: 0.75rem 1.75rem;
+  border: 3px solid var(--ztpink) !important;
+  /* border-radius: 1.55rem; */
+
+  cursor: pointer;
+}
+.btn-primary-outlined:hover{
+  color: var(--ztpink-hover) !important;
+  border: 3px solid var(--ztpink-hover) !important;
+}
+
+.btn-primary:hover{
+  background-color: var(--ztpink-hover) !important;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links > li{
+  border-bottom: 3px solid var(--ztwhite);
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.5s ease-in-out;
+}
+.nav-links > li:hover {
+  border-bottom: 3px solid var(--ztpink);
+}
+.text-primary {
+  color: var(--ztpink);
+}
+.bg-primary-50 {
+  background-color: rgba(255, 90, 53, 0.1);
+}
+
+@keyframes floatVertical {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 20px;
+  }
+}
+
+@keyframes driftHorizontal {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+.float-bg {
+  animation:
+    floatVertical 5s ease-in-out infinite,
+    driftHorizontal 3s linear infinite;
+}

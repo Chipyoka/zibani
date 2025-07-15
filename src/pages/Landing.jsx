@@ -35,11 +35,28 @@ const Landing = () => {
 
            </div>
 
-            <KnowZibani />
-            <Features />
-            <HowItWorks />
-            <OurStory />
-            <FAQs />
+
+           <section id="KnowZibani" className="min-h-screen  ">
+                 <KnowZibani />
+            </section>
+           <section id="Features" className="min-h-screen  ">
+               <Features />
+            </section>
+           <section id="HowItWorks" className="min-h-screen  ">
+                <HowItWorks />
+            </section>
+           <section id="OurStory" className="min-h-screen  ">
+                <OurStory />
+            </section>
+           <section id="FAQs" className="min-h-screen  ">
+                <FAQs />
+            </section>
+
+           
+            
+            
+            
+            
             <Footer />
             <ScrollToTop />
         </div>

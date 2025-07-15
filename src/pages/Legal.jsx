@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+import { useEffect } from 'react';
 
 const Legal = () => {
     // Set page title
@@ -14,6 +15,12 @@ const Legal = () => {
         console.error('Official email is not set in environment variables.');
         return <div>Error: Official email not configured.</div>;
     }
+
+    // Always start to top of the page
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+
     return (
         <>
             <Navbar />

@@ -1,6 +1,9 @@
 import {React} from 'react';
 import Logo from '../assets/zibani-logo.png'; 
 
+import { Link } from 'react-scroll';
+import {NavLink} from 'react-router-dom';
+
 const Navbar = () => {
     return (
         <nav className=" flex items-center justify-between w-full py-6 px-32 bg-white shadow-sm fixed top-0 left-0 z-50">
@@ -11,11 +14,23 @@ const Navbar = () => {
             <div className=" flex justify-between items-center">
                
                 <ul className="flex space-x-8 nav-links">
-                    <li>Home</li>
-                    <li>Features</li>
-                    <li>How it Works</li>
-                    <li>Our Story</li>
-                    <li>FAQs</li>
+                    <li>
+                        <NavLink to="/" exact activeClassName="active">
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <Link to="Features" smooth={true} duration={500} offset={-50}>Features</Link>
+                    </li>
+                    <li>
+                        <Link to="HowItWorks" smooth={true} duration={500} offset={-50}>How it Works</Link>
+                    </li>
+                    <li>
+                        <Link to="OurStory" smooth={true} duration={500} offset={-50}>Our Story</Link>
+                    </li>
+                    <li>
+                        <Link to="FAQs" smooth={true} duration={500} offset={-50}>FAQs</Link>
+                    </li>
                     {/* <li>Contact</li>   */}
                 </ul>
 

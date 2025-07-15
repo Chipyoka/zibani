@@ -1,6 +1,8 @@
 
 import Logo from '../assets/zibani-logo-w.png'; 
 
+import {NavLink} from 'react-router-dom';
+
 const Footer = () => {
     return (
         <footer className="bg-gray-100 text-gray-700 py-8 w-full max-w-full mt-8 px-20">
@@ -22,11 +24,14 @@ const Footer = () => {
                     <div className="mt-6 border-t-2 border-gray-500 pt-4">
                         <p className="text-sm font-semibold">Legal</p>
 
-                        <ul className="text-xs font-light mt-4 space-y-2">
-                            <li className="w-fit hover:underline cursor-pointer">Cookie Policy</li>
-                            <li className="w-fit hover:underline cursor-pointer">Privacy Policy</li>
-                            <li className="w-fit hover:underline cursor-pointer">Terms of Service</li>
-                        </ul>
+                        <NavLink to="/legal">
+                            <ul className="text-xs font-light mt-4 space-y-2">
+                                <li className="w-fit hover:underline cursor-pointer">Cookie Policy</li>
+                                <li className="w-fit hover:underline cursor-pointer">Privacy Policy</li>
+                                <li className="w-fit hover:underline cursor-pointer">Terms of Service</li>
+                                <li className="w-fit hover:underline cursor-pointer">Compliance</li>
+                            </ul>
+                        </NavLink>
                     </div>
                 </div>
 

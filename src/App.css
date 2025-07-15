@@ -10,9 +10,14 @@
   --ztpink-hover:#fa4922;
   --ztblue:#368aff;
   --ztblack:#4d4d4d;
+  --ztblack-2:#3c3c3c;
   --ztgray:#f2f2f2;
   --ztwhite:#ffffff;
   --zibani-grad: linear-gradient(180deg, #ff5a35 0%, #ed0bd3 100%);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 hr {

@@ -8,6 +8,10 @@ import Navbar from '../components/Navbar';
 import KnowZibani from '../components/KnowZibani';
 import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
+import OurStory from '../components/OurStory';
+import FAQs from '../components/Faqs';
+import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Landing = () => {
     return (
@@ -34,6 +38,10 @@ const Landing = () => {
             <KnowZibani />
             <Features />
             <HowItWorks />
+            <OurStory />
+            <FAQs />
+            <Footer />
+            <ScrollToTop />
         </div>
     );
 };

@@ -10,9 +10,15 @@
   --ztpink-hover:#fa4922;
   --ztblue:#368aff;
   --ztblack:#4d4d4d;
-  --ztwgray:#f2f2f2;
+  --ztgray:#f2f2f2;
   --ztwhite:#ffffff;
   --zibani-grad: linear-gradient(180deg, #ff5a35 0%, #ed0bd3 100%);
+}
+
+hr {
+  border: none;
+  height: 1.5px;
+  background-color: #dcdcdc;
 }
 
 .btn-primary{
@@ -132,6 +138,11 @@
 }
 
 .card-hover-float:hover {
-  transform: translateY(-8px);
+  transform: translateY(-12px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+footer{
+  background-color: var(--ztblack);
+  color: var(--ztwhite);
 }

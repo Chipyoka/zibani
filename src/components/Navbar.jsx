@@ -16,7 +16,7 @@ const Navbar = () => {
                     <li>How it Works</li>
                     <li>Our Story</li>
                     <li>FAQs</li>
-                    <li>Contact</li>  
+                    {/* <li>Contact</li>   */}
                 </ul>
 
             </div>

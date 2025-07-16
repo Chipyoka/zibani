@@ -14,6 +14,10 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
 const Landing = () => {
+
+     // Set page title
+    document.title = 'Your voice-guided travel app - Zibani';
+
     return (
         <div className="flex flex-col items-center justify-center w-full max-w-full">
             <Navbar />

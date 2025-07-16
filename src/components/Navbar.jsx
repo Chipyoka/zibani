@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
 
             <div className="buttons">
-                <button className="btn-primary rounded-full">Register Now</button>
+                <NavLink to="/register" className="btn-primary rounded-full">Register Now</NavLink>
             </div>
         </nav>
     );

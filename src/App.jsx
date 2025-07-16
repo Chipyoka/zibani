@@ -6,9 +6,10 @@ import CookieConsent from './components/CookieConsent';
 
 import LandingPage from './pages/Landing'
 import Legal from './pages/Legal'
+import Register from './pages/Register'
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
 

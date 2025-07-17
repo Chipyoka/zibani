@@ -8,6 +8,8 @@ import LandingPage from './pages/Landing'
 import Legal from './pages/Legal'
 import Register from './pages/Register'
 
+import MainApp from './pages/MainApp'; 
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 function App() {
 
@@ -21,6 +23,10 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/app" element={<MainApp />} />
+          
+          {/* Add more routes as needed */}
+          <Route path="*" element={<LandingPage />} /> {/* Fallback route */}
         </Routes>
       </Router>
 

@@ -1,5 +1,8 @@
 import {React} from 'react';
 import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+
+
 import Mic from '../assets/icons/mic.svg';
 import Launch from '../assets/icons/launch.svg';
 import AddHome from '../assets/icons/add-home.svg';
@@ -33,7 +36,10 @@ const Landing = () => {
             <p className="text-lg">A voice-guided journey through heritage, places, and people. Doesn’t matter where you are, listen while you travel !</p>
 
             <div className="buttons flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
-                <button className="btn-primary flex items-center justify-center rounded-full gap-x-2"><img src={Launch} alt="Launch Icon" /> Launch Zibani Now !</button>
+                <NavLink to="/app">
+                    <button className="btn-primary flex items-center justify-center rounded-full gap-x-2"><img src={Launch} alt="Launch Icon" /> Launch Zibani Now !</button>
+                </NavLink>
+                
                 <button className="btn-primary-outlined flex items-center justify-center rounded-full gap-x-2"><img src={AddHome} alt="Add Home Icon" /> Add to home screen</button>
             </div>
 

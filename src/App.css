@@ -26,6 +26,35 @@ hr {
   background-color: #dcdcdc;
 }
 
+
+/* Thin scrollbar - Cross-browser solution */
+* {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+
 .btn-primary{
   background-color: var(--ztpink) !important;
   color: white !important;
@@ -58,7 +87,14 @@ hr {
   display: flex;
   justify-content: center;
 }
-
+.nav-item{
+    border-bottom: 3px solid var(--ztwhite);
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.5s ease-in-out;
+}
+.nav-item:hover {
+  border-bottom: 3px solid var(--ztpink);
+}
 .nav-links > li{
   border-bottom: 3px solid var(--ztwhite);
   cursor: pointer;
